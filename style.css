@@ -360,6 +360,10 @@ footer a {
   margin: 26px 0 8px;
   font-size: 19px;
 }
+.doc h3 {
+  margin: 20px 0 4px;
+  font-size: 17px;
+}
 .doc p,
 .doc li {
   font-size: 16px;
