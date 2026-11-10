@@ -1,4 +1,3 @@
-// Website only. The native app uses its own small Firestore activity log.
 (() => {
   if (!['www.wafuelrefund.com', 'wafuelrefund.com'].includes(location.hostname)) return;
   const key = 'wafuel.website.analytics.disabled';
