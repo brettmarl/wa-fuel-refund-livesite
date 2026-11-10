@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#006747" />
     <link rel="icon" href="favicon.png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="/analytics.js" defer></script>
   </head>
   <body>
     <div class="doc-head">
@@ -14,7 +15,7 @@
     </div>
     <main class="doc">
       <h1>Privacy policy</h1>
-      <p class="date">Effective November 7, 2026</p>
+      <p class="date">Effective November 10, 2026</p>
 
       <p>
         This policy explains how the WA Fuel Refund app and the website www.wafuelrefund.com (together, the "Service") handle information. The Service is provided
@@ -23,14 +24,14 @@
 
       <h2>The short version</h2>
       <ul>
-        <li>The app doesn't need an account, and we don't run a server that stores your data.</li>
-        <li>Your receipts, claims and details stay on your phone.</li>
+        <li>The app doesn't ask you to create an account. Receipt contents and personal details stay on your phone.</li>
+        <li>We use Firebase to collect installation activity and rounded receipt, gallon and refund totals, which you can turn off in Settings.</li>
         <li>When you file, the app sends your claim to Washington's Department of Licensing (DOL), the same as filing by hand.</li>
-        <li>We don't currently collect usage data, we don't show ads, and we never sell your information.</li>
+        <li>The website uses Google Analytics for visits, traffic sources and download-link taps. We don't show ads or sell your information.</li>
       </ul>
 
       <h2>Information stored on your device</h2>
-      <p>The app stores the following only on your phone, in the app's private storage:</p>
+      <p>The app stores the following in its private storage on your phone; only the rounded summary totals described below are included in usage metrics:</p>
       <ul>
         <li>Receipt photos you take or choose, and what's read from them (date, total, gallons, fuel type).</li>
         <li>Your claims: which receipts were claimed, when, and DOL's confirmation number and refund amount.</li>
@@ -45,7 +46,7 @@
         in on DOL's sign-in page after Face ID or your passcode. They aren't sent anywhere else.
       </p>
       <p>
-        We can't see any of this information. It may be included in your phone's own backups (for example iCloud Backup) if you have them turned on; those are
+        We don't receive these receipt contents or personal details through usage metrics. It may be included in your phone's own backups (for example iCloud Backup) if you have them turned on; those are
         governed by your backup provider.
       </p>
 
@@ -64,11 +65,14 @@
         <li>
           <b>Email.</b> If you email us, we receive your email address and whatever you include, and use it only to reply and help you.
         </li>
+        <li>
+          <b>Problem reports.</b> If filing stops on something unexpected, you can choose to send us a report by email. It contains the steps the app took and a copy of the DOL page where it stopped, with numbers and typed-in values masked, though your name or address may still appear. Nothing is sent unless you choose to send it, and your password is never included.
+        </li>
       </ul>
-      <p>
-        We don't currently receive any usage data, analytics or diagnostics from the app. If we add them (for example anonymous usage counts, or diagnostics you
-        choose to send when you need help), we'll update this policy to describe exactly what's collected before the app starts collecting it.
-      </p>
+      <h2>App usage metrics</h2>
+      <p>We use Google Firebase to store a randomly assigned installation identifier, first and last activity times, app version and platform, receipt count, whole-gallon totals, whole-dollar unclaimed estimates and submitted refund totals, and the number of submitted claims. We also record app opens, receipt saves, and setup, connection and filing runs: progress signal names, numeric steps and results. These help us understand use and fix problems.</p>
+      <p>Metrics do not contain receipt photos or text, purchase dates or individual receipt amounts, names, phone numbers, boat registrations, DOL account IDs, sign-ins, bank details or DOL page contents. Firebase processes technical connection information to provide its service. Installation identifiers distinguish installations, not verified people; we do not try to match them to website visitors.</p>
+      <p>You can stop future uploads in Settings → Share usage metrics. Events may queue on the device while offline; the queue is limited to the most recent 500 events and is cleared when you turn sharing off. Metrics already received remain until deleted. To request deletion of received metrics, contact us before turning sharing off or deleting the app so we can help identify the installation.</p>
 
       <h2>Camera, photos and Face ID</h2>
       <p>
@@ -78,26 +82,24 @@
 
       <h2>The website</h2>
       <p>
-        www.wafuelrefund.com is a static website hosted by GitHub Pages. It doesn't use cookies, analytics or trackers. GitHub may log technical information such
-        as IP addresses to operate and secure its service.
+        www.wafuelrefund.com is hosted by GitHub Pages and uses Google Analytics 4 to measure visits, approximate unique browsers, traffic sources and taps on store and early-access links. Google Analytics uses browser identifiers and cookies. Advertising personalization and Google signals are disabled in our configuration. GitHub and Google may process technical connection information under their own privacy policies. <button type="button" data-analytics-choice>Disable website analytics</button> (applies to this browser). Disabling analytics stops future measurement; existing cookies may remain until cleared in your browser.
       </p>
 
       <h2>How long information is kept</h2>
       <p>
-        Information on your phone is kept until you delete it in the app or delete the app. Emails you send us are kept as long as needed to help you and then
+        Information on your phone is kept until you delete it in the app or delete the app. We review received app metrics after six months and delete them when no longer needed to understand usage or resolve problems. Emails you send us are kept as long as needed to help you and then
         deleted within a reasonable time.
       </p>
 
       <h2>Security</h2>
       <p>
-        Your information stays on your device, protected by your phone's own security. Saved sign-ins use the iOS Keychain, limited to this device and only
-        available when it's unlocked. Connections to DOL use HTTPS. No method of storage or transmission is completely secure, so please keep your phone locked.
+        Receipt contents and personal details stay on your device, protected by your phone's own security. Saved sign-ins use the iOS Keychain, limited to this device and only
+        available when it's unlocked. Connections to DOL and Firebase use HTTPS. Received app metrics are restricted to the developer's authorized admin account. No method of storage or transmission is completely secure, so please keep your phone locked.
       </p>
 
       <h2>Your choices and rights</h2>
       <p>
-        You can view, edit or delete any receipt in the app, export your receipt photos from Settings, and delete the app to remove everything it stores. Since we
-        don't hold your app data, there's nothing for us to access or delete on our side, apart from emails you've sent, which you can ask us to delete. Depending
+        You can view, edit or delete any receipt in the app, export your receipt photos from Settings, and delete the app to remove everything it stores. You can turn off future usage metrics in Settings and ask us to delete metrics or emails we hold. Depending
         on where you live, you may have other privacy rights; contact us to exercise them.
       </p>
 
