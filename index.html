@@ -69,8 +69,9 @@
             </span>
           </div>
           <div class="early">
-            <p><b>Now in early access.</b> We're inviting iPhone users to try it through Apple's TestFlight.</p>
-            <a class="early-go" href="mailto:help@wafuelrefund.com?subject=WA%20Fuel%20Refund%20early%20access&amp;body=I'd%20like%20to%20try%20WA%20Fuel%20Refund.%0A%0AEmail%20for%20my%20TestFlight%20invite%3A%20%0AiPhone%20model%3A%20">Request early access</a>
+            <p><b>Now in early access.</b> We're inviting boaters to try it before launch.</p>
+            
+            <a class="early-go" href="mailto:help@wafuelrefund.com?subject=WA%20Fuel%20Refund%20early%20access">Request early access</a>
           </div>
         </div>
 
@@ -83,6 +84,31 @@
       </div>
     </header>
 
+    
+    <dialog class="early-dialog" aria-labelledby="early-title">
+      <button type="button" class="early-close" aria-label="Close">×</button>
+      <form class="early-form">
+        <h2 id="early-title">Request early access</h2>
+        <p class="early-intro">We'll email you an invite to try WA Fuel Refund before it launches.</p>
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" required="" maxlength="254" autocomplete="email" placeholder="you@example.com">
+        </label>
+        <fieldset class="choice">
+          <legend>Your phone</legend>
+          <label><input type="radio" name="platform" value="ios" required=""><span>iPhone</span></label>
+          <label><input type="radio" name="platform" value="android"><span>Android</span></label>
+        </fieldset>
+        <fieldset class="choice">
+          <legend>Your boat runs on</legend>
+          <label><input type="radio" name="fuel" value="gas" required=""><span>Gas</span></label>
+          <label><input type="radio" name="fuel" value="diesel"><span>Diesel</span></label>
+        </fieldset>
+        <button class="early-send" type="submit">Send request</button>
+        <p class="early-msg" role="status" aria-live="polite"></p>
+      </form>
+    </dialog>
+
     <footer>
       <nav>
         <a href="privacy">Privacy</a>
@@ -92,6 +118,7 @@
       </nav>
       WA Fuel Refund isn't made by or affiliated with the Washington State Department of Licensing.<br>© 2026 Orca Labs LLC
     </footer>
+    <script>(function(){var dialog=document.querySelector(".early-dialog");var form=document.querySelector(".early-form");if(!dialog||!form||typeof dialog.showModal!=="function")return;document.querySelector(".early .early-go").addEventListener("click",function(e){e.preventDefault();dialog.showModal();if(window.gtag)window.gtag("event","early_access_open")});dialog.querySelector(".early-close").addEventListener("click",function(){dialog.close()});var pressedBackdrop=false;function onBackdrop(e){var r=dialog.getBoundingClientRect();return e.target===dialog&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)}dialog.addEventListener("pointerdown",function(e){pressedBackdrop=onBackdrop(e)});dialog.addEventListener("click",function(e){if(pressedBackdrop&&onBackdrop(e))dialog.close();pressedBackdrop=false});var msg=form.querySelector(".early-msg");var button=form.querySelector(".early-send");var docs="projects/wafuelrefund/databases/(default)/documents";var url="https://firestore.googleapis.com/v1/"+docs+":commit?key=AIzaSyA59tdKZ4b-uUF6xZ7puz_tm0-8NNoIjqY";function newId(){if(window.crypto&&crypto.randomUUID)return crypto.randomUUID();return"xxxxxxxx-xxxx-4xxx-8xxx-xxxxxxxxxxxx".replace(/x/g,function(){return(Math.random()*16|0).toString(16)})}form.addEventListener("submit",function(e){e.preventDefault();var data=new FormData(form);var platform=String(data.get("platform"));var fuel=String(data.get("fuel"));button.disabled=true;button.textContent="Sending…";msg.textContent="";fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({writes:[{update:{name:docs+"/earlyAccess/"+newId(),fields:{email:{stringValue:String(data.get("email")).trim().toLowerCase()},platform:{stringValue:platform},fuel:{stringValue:fuel}}},updateTransforms:[{fieldPath:"receivedAt",setToServerValue:"REQUEST_TIME"}],currentDocument:{exists:false}}]})}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status)}).then(function(){if(window.gtag)window.gtag("event","early_access_request",{platform:platform,fuel:fuel});form.innerHTML='<h2 id="early-title">Thanks!</h2><p class="early-intro">We’ll email you an invite soon.</p>'+'<button type="button" class="early-send">Done</button>';form.querySelector(".early-send").addEventListener("click",function(){dialog.close()})}).catch(function(){button.disabled=false;button.textContent="Send request";msg.innerHTML='That didn’t go through. Please try again, or email <a href="mailto:help@wafuelrefund.com">help@wafuelrefund.com</a>.'})})})();</script>
   
 
 </body></html>

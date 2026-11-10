@@ -142,6 +142,159 @@ h1 {
 .early b {
   color: #fff;
 }
+.early-dialog {
+  width: min(420px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  padding: 0;
+  border: 0;
+  border-radius: 20px;
+  color: var(--text);
+  background: var(--card);
+  box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.5);
+}
+.early-dialog::backdrop {
+  background: rgb(14 23 38 / 0.55);
+}
+.early-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 17px;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--muted);
+  background: var(--bg);
+  cursor: pointer;
+}
+.early-form {
+  display: grid;
+  gap: 16px;
+  padding: 26px 24px 24px;
+}
+.early-form h2 {
+  margin: 0 40px 0 0;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+.early-intro {
+  margin: -8px 0 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.early-form .field span,
+.early-form legend {
+  display: block;
+  margin-bottom: 6px;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 650;
+}
+.early-form input[type='email'] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(14 23 38 / 0.2);
+  border-radius: 10px;
+  font: inherit;
+  font-size: 16px;
+  color: var(--text);
+  background: #fff;
+}
+.early-form input[type='email']:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
+.choice {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.choice legend {
+  grid-column: 1 / -1;
+}
+.choice label {
+  position: relative;
+  display: block;
+}
+.choice input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+}
+.choice label span {
+  display: block;
+  padding: 11px 12px;
+  border: 1px solid rgb(14 23 38 / 0.2);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+}
+.choice input:checked + span {
+  border-color: var(--green);
+  color: #fff;
+  background: var(--green);
+}
+.choice input:focus-visible + span {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+.early-send {
+  margin-top: 4px;
+  padding: 14px;
+  border: 0;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 750;
+  color: #fff;
+  background: var(--green);
+  cursor: pointer;
+}
+.early-send:hover {
+  background: var(--green-dark);
+}
+.early-send:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+.early-msg {
+  margin: 0;
+  font-size: 14px;
+  color: #b42318;
+}
+.early-msg:empty {
+  display: none;
+}
+@media (max-width: 560px) {
+  .early-dialog {
+    width: 100%;
+    max-width: none;
+    margin: auto 0 0;
+    border-radius: 20px 20px 0 0;
+  }
+  .early-dialog[open] {
+    animation: early-up 0.22s ease-out;
+  }
+  .early-form {
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
+  }
+}
+@keyframes early-up {
+  from {
+    transform: translateY(100%);
+  }
+}
 .early-go {
   display: inline-block;
   padding: 12px 22px;
