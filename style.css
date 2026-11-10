@@ -21,8 +21,6 @@ body {
 a {
   color: var(--green);
 }
-
-/* ---------------------------------------------------------------- hero */
 .hero {
   color: #fff;
   background: var(--green);
@@ -114,14 +112,11 @@ h1 {
   align-items: center;
   gap: 14px;
 }
-/* not live yet: muted until the store listings exist */
 .badge {
   display: inline-flex;
   filter: grayscale(1);
   opacity: 0.45;
 }
-/* Apple's badge: 120x40 artboard. Google's PNG has a transparent margin (41px of
-   250px on each side), so it's drawn larger and pulled in to match Apple's height. */
 .badge-apple {
   height: 52px;
   width: auto;
@@ -160,8 +155,6 @@ h1 {
 .early-go:hover {
   filter: brightness(1.05);
 }
-
-/* ---------------------------------------------------------------- sample app screen */
 .phone {
   justify-self: center;
   width: 300px;
@@ -306,8 +299,6 @@ h1 {
   color: var(--muted);
   font-weight: 600;
 }
-
-/* ---------------------------------------------------------------- footer + text pages */
 footer {
   padding: 28px 20px 40px;
   text-align: center;
@@ -384,7 +375,6 @@ footer a {
   h1 {
     font-size: 36px;
   }
-  /* one centered column, so the text lines up with the phone below it */
   .pitch {
     text-align: center;
   }
