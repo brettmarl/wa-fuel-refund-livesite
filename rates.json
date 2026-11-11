@@ -1,0 +1,227 @@
+{
+ "source": "https://dol.wa.gov/vehicles-and-boats/prorate-and-fuel-tax/fuel-tax/fuel-tax-refunds",
+ "checkedAt": "2026-11-06T00:00:00Z",
+ "changedAt": "2026-11-06T00:00:00Z",
+ "periods": [
+  {
+   "start": "2026-11-01",
+   "end": "2026-12-31",
+   "gas": {
+    "stateTax": 0.565,
+    "useTax": 0.33,
+    "coastalFee": 0.01,
+    "avgCost": 4.517,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.08800000000000001
+   },
+   "diesel": {
+    "stateTax": 0.595,
+    "useTax": 0.36,
+    "coastalFee": 0,
+    "avgCost": 4.83,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.08800000000000001
+   }
+  },
+  {
+   "start": "2026-07-01",
+   "end": "2026-10-31",
+   "gas": {
+    "stateTax": 0.565,
+    "useTax": 0.33,
+    "coastalFee": 0.01,
+    "avgCost": 4.517,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.08800000000000001
+   },
+   "diesel": {
+    "stateTax": 0.595,
+    "useTax": 0.36,
+    "coastalFee": 0,
+    "avgCost": 4.83,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.08800000000000001
+   }
+  },
+  {
+   "start": "2026-01-01",
+   "end": "2026-06-30",
+   "gas": {
+    "stateTax": 0.554,
+    "useTax": 0.31,
+    "coastalFee": 0.01,
+    "avgCost": 4.277,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.087
+   },
+   "diesel": {
+    "stateTax": 0.584,
+    "useTax": 0.29,
+    "coastalFee": 0,
+    "avgCost": 4.087,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.087
+   }
+  },
+  {
+   "start": "2025-07-01",
+   "end": "2025-12-31",
+   "gas": {
+    "stateTax": 0.554,
+    "useTax": 0.29,
+    "coastalFee": 0.01,
+    "avgCost": 4.016,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.087
+   },
+   "diesel": {
+    "stateTax": 0.584,
+    "useTax": 0.27,
+    "coastalFee": 0,
+    "avgCost": 3.791,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.087
+   }
+  },
+  {
+   "start": "2025-01-01",
+   "end": "2025-06-30",
+   "gas": {
+    "stateTax": 0.494,
+    "useTax": 0.29,
+    "coastalFee": 0.01,
+    "avgCost": 4.026,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.087
+   },
+   "diesel": {
+    "stateTax": 0.494,
+    "useTax": 0.27,
+    "coastalFee": 0,
+    "avgCost": 3.881,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.087
+   }
+  },
+  {
+   "start": "2024-07-01",
+   "end": "2024-12-31",
+   "gas": {
+    "stateTax": 0.494,
+    "useTax": 0.31,
+    "coastalFee": 0.01,
+    "avgCost": 4.187,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.087
+   },
+   "diesel": {
+    "stateTax": 0.494,
+    "useTax": 0.29,
+    "coastalFee": 0,
+    "avgCost": 4.098,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.087
+   }
+  },
+  {
+   "start": "2024-01-01",
+   "end": "2024-06-30",
+   "gas": {
+    "stateTax": 0.494,
+    "useTax": 0.36,
+    "coastalFee": 0.01,
+    "avgCost": 4.761,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.087
+   },
+   "diesel": {
+    "stateTax": 0.494,
+    "useTax": 0.34,
+    "coastalFee": 0,
+    "avgCost": 4.655,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.087
+   }
+  },
+  {
+   "start": "2023-07-01",
+   "end": "2023-12-31",
+   "gas": {
+    "stateTax": 0.494,
+    "useTax": 0.3,
+    "coastalFee": 0.01,
+    "avgCost": 4.113,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.087
+   },
+   "diesel": {
+    "stateTax": 0.494,
+    "useTax": 0.34,
+    "coastalFee": 0,
+    "avgCost": 4.624,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.087
+   }
+  },
+  {
+   "start": "2023-01-01",
+   "end": "2023-06-30",
+   "gas": {
+    "stateTax": 0.494,
+    "useTax": 0.37,
+    "coastalFee": 0.01,
+    "avgCost": 4.892,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.087
+   },
+   "diesel": {
+    "stateTax": 0.494,
+    "useTax": 0.42,
+    "coastalFee": 0,
+    "avgCost": 5.525,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.087
+   }
+  },
+  {
+   "start": "2022-07-01",
+   "end": "2022-12-31",
+   "gas": {
+    "stateTax": 0.494,
+    "useTax": 0.34,
+    "coastalFee": 0.01,
+    "avgCost": 4.63,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.087
+   },
+   "diesel": {
+    "stateTax": 0.494,
+    "useTax": 0.38,
+    "coastalFee": 0,
+    "avgCost": 5.16,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.087
+   }
+  },
+  {
+   "start": "2022-01-01",
+   "end": "2022-06-30",
+   "gas": {
+    "stateTax": 0.494,
+    "useTax": 0.27,
+    "coastalFee": 0.01,
+    "avgCost": 3.8,
+    "federalTax": 0.184,
+    "salesTaxRate": 0.086
+   },
+   "diesel": {
+    "stateTax": 0.494,
+    "useTax": 0.26,
+    "coastalFee": 0,
+    "avgCost": 3.74,
+    "federalTax": 0.244,
+    "salesTaxRate": 0.086
+   }
+  }
+ ]
+}
