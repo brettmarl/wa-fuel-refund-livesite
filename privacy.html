@@ -23,7 +23,8 @@
       <h2>The short version</h2>
       <ul>
         <li>The app doesn't ask you to create an account. Receipt contents and personal details stay on your phone.</li>
-        <li>We use Firebase to collect installation activity and rounded receipt, gallon and refund totals, which you can turn off in Settings.</li>
+        <li>We use Firebase to collect installation activity and rounded receipt, gallon and refund totals.</li>
+        <li>If you pay a filing fee, Apple or Google takes the payment, and we keep a record of the purchase (not your card or your receipts) for support and refunds.</li>
         <li>When you file, the app sends your claim to Washington's Department of Licensing (DOL), the same as filing by hand.</li>
         <li>The website uses Google Analytics for visits, traffic sources and download-link taps. We don't show ads or sell your information.</li>
       </ul>
@@ -58,7 +59,7 @@
         </li>
         <li>
           <b>Apple and Google.</b> If you download the app from the App Store or Google Play, they may collect information under their own privacy policies (for
-          example download counts and crash reports you agree to share with developers).
+          example download counts and crash reports you agree to share with developers). They also process filing-fee payments; we never receive your card or bank details.
         </li>
         <li>
           <b>Email.</b> If you email us, we receive your email address and whatever you include, and use it only to reply and help you.
@@ -71,6 +72,18 @@
       <p>We use Google Firebase to store a randomly assigned installation identifier, first and last activity times, app version and platform, receipt count, whole-gallon totals, whole-dollar unclaimed estimates and submitted refund totals, and the number of submitted claims. We also record app opens, receipt saves, and setup, connection and filing runs: progress signal names, numeric steps and results. These help us understand use and fix problems.</p>
       <p>Metrics do not contain receipt photos or text, purchase dates or individual receipt amounts, names, phone numbers, boat registrations, DOL account IDs, sign-ins, bank details or DOL page contents. Firebase processes technical connection information to provide its service. Installation identifiers distinguish installations, not verified people; we do not try to match them to website visitors.</p>
       <p>Usage metrics are part of how the app works and can't be turned off in the app; deleting the app stops them. Events may queue on the device while offline; the queue is limited to the most recent 500 events. Metrics already received remain until deleted. To request deletion of received metrics, contact us before deleting the app so we can help identify the installation.</p>
+
+      <h2>Filing-fee purchases</h2>
+      <p>
+        When you pay a filing fee, the app stores a record of the purchase in Google Firebase: the store (App Store or Google Play) and its transaction or order
+        number, the fee, the months and rate period of the claim it paid for, the claim's estimated refund in whole dollars, when you paid, whether and when the claim
+        was submitted to DOL, whether it was a test purchase, and the app version and platform. Records are grouped under a random purchase identifier for your
+        installation. It is separate from the usage-metrics identifier, and we don't link the two.
+      </p>
+      <p>
+        Purchase records don't contain your name, phone number, boat registration, DOL account, sign-in, receipts or bank details. We use them to answer support
+        questions, handle refunds and keep our accounts, and we may check them with Apple or Google to confirm a purchase or learn of a refund.
+      </p>
 
       <h2>Camera, photos and Face ID</h2>
       <p>
@@ -92,19 +105,19 @@
 
       <h2>How long information is kept</h2>
       <p>
-        Information on your phone is kept until you delete it in the app or delete the app. We review received app metrics after six months and delete them when no longer needed to understand usage or resolve problems. Emails you send us are kept as long as needed to help you and then
+        Information on your phone is kept until you delete it in the app or delete the app. We review received app metrics after six months and delete them when no longer needed to understand usage or resolve problems. Purchase records are kept as long as we need them for support, refunds, and accounting and tax records. Emails you send us are kept as long as needed to help you and then
         deleted within a reasonable time.
       </p>
 
       <h2>Security</h2>
       <p>
         Receipt contents and personal details stay on your device, protected by your phone's own security. Saved sign-ins use the iOS Keychain, limited to this device and only
-        available when it's unlocked. Connections to DOL and Firebase use HTTPS. Received app metrics are restricted to the developer's authorized admin account. No method of storage or transmission is completely secure, so please keep your phone locked.
+        available when it's unlocked. Connections to DOL and Firebase use HTTPS. Received app metrics and purchase records are restricted to the developer's authorized admin account. No method of storage or transmission is completely secure, so please keep your phone locked.
       </p>
 
       <h2>Your choices and rights</h2>
       <p>
-        You can view, edit or delete any receipt in the app, export your receipt photos from Settings, and delete the app to remove everything it stores. You can ask us to delete metrics or emails we hold. Depending
+        You can view, edit or delete any receipt in the app, export your receipt photos from Settings, and delete the app to remove everything it stores. You can ask us to delete metrics or emails we hold, and purchase records once we no longer need them for accounting and tax records. Depending
         on where you live, you may have other privacy rights; contact us to exercise them.
       </p>
 
