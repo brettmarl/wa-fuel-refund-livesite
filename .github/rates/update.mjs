@@ -42,6 +42,7 @@ if (oldPeriods.length && periods[0].end < oldPeriods[0].end) fail(`Newest period
 
 const now = new Date().toISOString();
 const changed = JSON.stringify(periods) !== JSON.stringify(oldPeriods);
-const out = { source: SOURCE, checkedAt: now, changedAt: changed ? now : (old.changedAt ?? now), periods };
+// keep keys added by hand (minAppVersion: builds older than it can't file)
+const out = { ...old, source: SOURCE, checkedAt: now, changedAt: changed ? now : (old.changedAt ?? now), periods };
 writeFileSync(FILE, JSON.stringify(out, null, 1) + '\n');
 console.log(changed ? `Rates changed: ${periods.length} periods, newest ${periods[0].start} to ${periods[0].end}` : 'Rates unchanged');

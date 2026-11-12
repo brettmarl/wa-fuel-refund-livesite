@@ -79,6 +79,15 @@
         <div class="phone" aria-label="The WA Fuel Refund app">
           <div class="screen">
             <img src="app-screen.jpg" alt="WA Fuel Refund reading a fuel receipt: total, date and gallons are boxed in red and confirmed below">
+            <button type="button" class="demo-play" data-video="2gySY_1MMSQ" aria-label="Play the demo video">
+              <span class="demo-icon" aria-hidden="true">
+                <svg viewBox="0 0 68 48" width="68" height="48">
+                  <path class="demo-bg" d="M66.5 7.7a8.6 8.6 0 0 0-6-6C55.2.3 34 .3 34 .3s-21.2 0-26.5 1.4a8.6 8.6 0 0 0-6 6C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.6 8.6 0 0 0 6 6C12.8 47.7 34 47.7 34 47.7s21.2 0 26.5-1.4a8.6 8.6 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3"></path>
+                  <path d="M45 24 27 14v20" fill="#fff"></path>
+                </svg>
+              </span>
+              <span class="demo-label">Watch the demo</span>
+            </button>
           </div>
         </div>
       </div>
@@ -118,6 +127,7 @@
       </nav>
       WA Fuel Refund isn't made by or affiliated with the Washington State Department of Licensing.<br>© 2026 Orca Labs LLC
     </footer>
+    <script>(function(){var play=document.querySelector(".demo-play");if(!play)return;play.addEventListener("click",function(){var frame=document.createElement("iframe");frame.src="https://www.youtube-nocookie.com/embed/"+play.dataset.video+"?autoplay=1&playsinline=1&rel=0";frame.title="WA Fuel Refund demo";frame.allow="autoplay; encrypted-media; picture-in-picture; fullscreen";frame.allowFullscreen=true;frame.className="demo-frame";play.parentNode.replaceChildren(frame);if(window.gtag)window.gtag("event","demo_play")})})();</script>
     <script>(function(){var dialog=document.querySelector(".early-dialog");var form=document.querySelector(".early-form");if(!dialog||!form||typeof dialog.showModal!=="function")return;document.querySelector(".early .early-go").addEventListener("click",function(e){e.preventDefault();dialog.showModal();if(window.gtag)window.gtag("event","early_access_open")});dialog.querySelector(".early-close").addEventListener("click",function(){dialog.close()});var pressedBackdrop=false;function onBackdrop(e){var r=dialog.getBoundingClientRect();return e.target===dialog&&(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)}dialog.addEventListener("pointerdown",function(e){pressedBackdrop=onBackdrop(e)});dialog.addEventListener("click",function(e){if(pressedBackdrop&&onBackdrop(e))dialog.close();pressedBackdrop=false});var msg=form.querySelector(".early-msg");var button=form.querySelector(".early-send");var docs="projects/wafuelrefund/databases/(default)/documents";var url="https://firestore.googleapis.com/v1/"+docs+":commit?key=AIzaSyA59tdKZ4b-uUF6xZ7puz_tm0-8NNoIjqY";function newId(){if(window.crypto&&crypto.randomUUID)return crypto.randomUUID();return"xxxxxxxx-xxxx-4xxx-8xxx-xxxxxxxxxxxx".replace(/x/g,function(){return(Math.random()*16|0).toString(16)})}form.addEventListener("submit",function(e){e.preventDefault();var data=new FormData(form);var platform=String(data.get("platform"));var fuel=String(data.get("fuel"));button.disabled=true;button.textContent="Sending…";msg.textContent="";fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({writes:[{update:{name:docs+"/earlyAccess/"+newId(),fields:{email:{stringValue:String(data.get("email")).trim().toLowerCase()},platform:{stringValue:platform},fuel:{stringValue:fuel}}},updateTransforms:[{fieldPath:"receivedAt",setToServerValue:"REQUEST_TIME"}],currentDocument:{exists:false}}]})}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status)}).then(function(){if(window.gtag)window.gtag("event","early_access_request",{platform:platform,fuel:fuel});form.innerHTML='<h2 id="early-title">Thanks!</h2><p class="early-intro">We’ll email you an invite soon.</p>'+'<button type="button" class="early-send">Done</button>';form.querySelector(".early-send").addEventListener("click",function(){dialog.close()})}).catch(function(){button.disabled=false;button.textContent="Send request";msg.innerHTML='That didn’t go through. Please try again, or email <a href="mailto:help@wafuelrefund.com">help@wafuelrefund.com</a>.'})})})();</script>
   
 
