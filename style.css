@@ -566,6 +566,91 @@ footer a {
   color: var(--muted);
   font-size: 14px;
 }
+.receipt-guide {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) 1fr;
+  gap: 24px;
+  align-items: center;
+  margin: 16px 0 8px;
+}
+.receipt-guide svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.receipt-guide .paper {
+  fill: #fbfaf6;
+  stroke: var(--hair);
+  filter: drop-shadow(0 2px 6px rgb(14 23 38 / 0.12));
+}
+.receipt-guide .hl rect {
+  fill: rgb(0 103 71 / 0.07);
+  stroke: var(--green);
+  stroke-width: 1.5;
+}
+.receipt-guide .rc text {
+  font: 15px 'Courier New', Courier, monospace;
+  fill: #222;
+}
+.receipt-guide .rc .big {
+  font-size: 17px;
+}
+.receipt-guide .rc .b {
+  font-weight: 700;
+}
+.receipt-guide .rc .sm {
+  font-size: 11.5px;
+}
+.receipt-guide .rc .muted {
+  fill: var(--muted);
+}
+.receipt-guide .badge circle {
+  fill: var(--green);
+}
+.receipt-guide .badge text {
+  fill: #fff;
+  font: 700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+}
+.receipt-keys {
+  list-style: none;
+  counter-reset: key;
+  margin: 0;
+  padding: 0;
+}
+.doc .receipt-keys li {
+  counter-increment: key;
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.receipt-keys li::before {
+  content: counter(key);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .receipt-guide {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .receipt-guide svg {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
 
 @media (max-width: 820px) {
   .hero {
